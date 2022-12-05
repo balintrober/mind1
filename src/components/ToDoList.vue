@@ -1,8 +1,14 @@
 <template>
   <input type="text" v-model="todo" @change="addItem(todo)" placeholder="Új feladat megadása">
-  <ul>
+  <!-- <ul>
     <li v-for="todo in todoList">{{ todo }}</li>
-  </ul>
+  </ul> -->
+  <table>
+    <tr v-for="todo in todoList">
+      <td>{{todo}}</td>
+      <td><span class="btn btn-danger">Törlés</span></td>
+    </tr>
+  </table>
 </template>
 
 <script setup>
